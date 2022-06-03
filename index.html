@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--responsividade-->
+    <link rel="stylesheet" href="style/responsive.css">
+
+    <!--owl css--> 
+    <link rel="stylesheet" href="lib/owlCarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="lib/owlCarousel/dist/assets/owl.theme.default.min.css">
+
+    <title>NETFLIX CLONE</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h2 class="logo">GHIBLIFLIX</h2>
+            <nav>
+                <a href="#">Inicio</a>
+                <a href="#">Séries</a>
+                <a href="#">Filmes</a>
+                <a href="#">Documentarios</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="filme">
+            <div class="container">
+                <h3 class="titulo">MEU AMIGO TOTORO</h3>
+                <P class="descricao">Mei é uma jovem que encontra uma pequena passagem em seu quintal, que a leva à um lendário espírito da floresta conhecido como Totoro. Quando Mei tenta visitar a mãe por conta própria, se perde na floresta e só o grande e fofo Totoro pode ajudar a menina a achar o caminho de volta para casa.</P>
+                <div class="botoes">
+                    <button role="button" class="botao">
+                        <i class="fa-solid fa-play"></i>
+                        ASSISTIR AGORA
+                    </button>
+                    <button role="button" class="botao">
+                        <i class="fa-solid fa-circle-info"></i>
+                        MAIS INFORMAÇÕES
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="owl-carousel owl-theme">
+        <div class="item"><img src="img/castelo.jpg" alt="poster do filme O Castelo Animado"></div>
+        <div class="item"><img src="img/chihiro.jpg" alt="poster do filme A Viagem de Chihiro"></div>
+        <div class="item"><img src="img/kiki.jpg" alt="poster do filme O Serviço de Entregas da Kiki"></div>
+        <div class="item"><img src="img/mononoke.jpg" alt="poster do filme Princesa Mononoke"></div>
+        <div class="item"><img src="img/sussuros.jpg" alt="poster do filme Sussuros do Coração"></div>        
+    </div>
+
+    <script src="https://kit.fontawesome.com/b1bb894cab.js" crossorigin="anonymous"></script>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/owlCarousel/dist/owl.carousel.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                items: 4,
+                loop: true,
+                margin: 15,
+                autoplay: true,
+                autoplayTimeout: 2500,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    360: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+                
+
+            });
+        })
+    </script>
+
+
+</body>
+</html>
